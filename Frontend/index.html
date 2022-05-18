@@ -47,15 +47,15 @@
 </div>	<div class="jumbotron d-flex align-items-center">
   <div class="container text-center">
 	<h1 class="display-1 mb-4">
-	<form class="form-container" id="submit-form" method="POST">
+	<form class="form-container" id="submit-form" method="POST" method="get" action="result.html"></form>
 		<p class="input-description">Name</p>
-		<input type="text" class="input-style" name="name" placeholder="Enter you name">
+		<input type="text" class="input-style" id="name" name="name" placeholder="Enter your name">
 		<p class="input-description">Age</p>
-		<input type="text" class="input-style" name="age" placeholder="Enter you age">
+		<input type="text" class="input-style" id="age" name="age" placeholder="Enter your age">
 		<p class="input-description">Height</p>
-		<input type="text" class="input-style" name="hieght" placeholder="Enter you height in CM">
+		<input type="text" class="input-style" name="height" placeholder="Enter your height in CM">
 		<p class="input-description">Weight</p>
-		<input type="text" class="input-style" name="weight" placeholder="Enter you weight in Kg">
+		<input type="text" class="input-style" name="weight" placeholder="Enter your weight in Kg">
         <p class="input-description">Gender</p>
 		<select name="gender" class="select-styling">
 			<option value="Choose Gender">Choose Gender</option>
@@ -105,7 +105,7 @@
 		</select> -->
 		<div class="heart"></div>
 		<!-- <button class="submit-button" value="submit" onclick="myOnClickFn()">Submit</button> -->
-		<input target="_link" class="submit-button" type="submit" onClick="myFunction()"/>
+		<input target="_link" class="submit-button" type="submit" onClick="myFunction()" onclick="passvalues();"/>
 
 	</form>
 	</h1>
@@ -145,13 +145,8 @@
 	 
 
 	<script src="js/app.min.js "></script>
-	<script src="//localhost:35729/livereload.js"></script>
 	<script src="./client.js"></script>
-	<script>
-		function myFunction() {
-		  window.location.href="finalpage.html";
-		}
-	  </script>
-	
+
+
 </body>
 </html>

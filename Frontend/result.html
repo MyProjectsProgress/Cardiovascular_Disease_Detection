@@ -47,18 +47,16 @@
 </div>	<div class="jumbotron d-flex align-items-center">
   <div class="container text-center">
 	<h1 class="display-1 mb-4">
-	<form class="form-container" id="submit-form" method="post">
-		<p class="input-description">Name</p>
-		<input type="text" class="input-style" name="age" placeholder="Enter you name">
-		<p class="input-description">Age</p>
-		<input type="text" class="input-style" name="age" placeholder="Enter you age">
-		
-		<p class="input-description">Presence or absence of cardiovascular disease</p>
-		<select  class="select-styling">
+	<!-- <form class="form-container" id="submit-form" method="post" method="get" action="result.html"> -->
+	<form class="form-container">
+		<h2 class="input-description">Name: <span id="result-name"></span></h2>
+		<h2 class="input-description">Age: <span id="result-age"></span></h2>
+		<p class="input-description">Presence or absence of cardiovascular disease:</p>
+		<!-- <select  class="select-styling">
 			<option value="Select">Select</option>
 			<option value="Yes">Yes</option>
 			<option value="No">No</option>
-		</select>
+		</select> -->
 		<div class="heart"></div>
 
 	</form>
@@ -99,8 +97,8 @@
 	 
 
 	<script src="js/app.min.js "></script>
-	<script src="//localhost:35729/livereload.js"></script>
 	<script src="./client.js"></script>
-	
+	<script src="./finalpage.js"></script>
+	<script src="request.js"></script>
 </body>
 </html>

@@ -135,7 +135,7 @@ section {
     animation: 1s fadeInFromTop cubic-bezier(0.785, 0.135, 0.15, 0.86) 1s forwards;
     animation-delay: .8s; 
     width: 600px;
-    height: 854px;
+    height: 350px;
 
   }
 

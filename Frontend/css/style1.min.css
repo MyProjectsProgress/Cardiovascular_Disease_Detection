@@ -90,8 +90,9 @@ section {
   color: #fff; }
 
 .jumbotron {
-  color: #fff;
+  color: black;
   padding-top: 80px;
+  border: none;
   padding-bottom: 80px;
   background-repeat: no-repeat;
   background-size: cover;
@@ -821,3 +822,59 @@ section {
 ::placeholder {
   text-align: center;
 }
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.header_fixed {
+  max-height: 100vh;
+  width: 100%;
+  overflow: auto;
+  border: 1px solid black;
+}
+
+.header_fixed thead th {
+  position: sticky;
+  top: 0;
+  background-color: #8E2DE2;
+  color: white;
+  font-size: 15px;
+  font-weight: 200;
+}
+
+th,
+td {
+  border-bottom: 1px solid #dddddd;
+  padding: 10px 20px;
+  font-size: 14px;
+}
+
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+tr:nth-child(odd) {
+  background-color: #edeef1;
+}
+
+tr:hover td {
+  color: #44b478;
+  cursor: pointer;
+  background-color: #ffffff;
+}
+
+td button {
+  border: none;
+  padding: 7px 20px;
+  border-radius: 20px;
+  background-color: #ff00cc;
+  color: #e6e7e8;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+

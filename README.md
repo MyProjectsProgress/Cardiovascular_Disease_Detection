@@ -6,14 +6,12 @@
 - Make sure you are in the write path
   (ex: "\<folder-location>\Cardiovascular_Disease_Detection\Backend")
 - run these commands in your command prompt
-  > `py -m venv env`
-  > <br>
 
-> `env\Scripts\activate`
-> <br>
+> `py -m venv env` <br>
 
-> `pip install django`
-> <br>
+> `env\Scripts\activate` <br>
+
+> `pip install django` <br>
 
 > `pip install djangorestframework`
 

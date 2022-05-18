@@ -124,14 +124,20 @@ section {
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */ }
   .jumbotron h1 {
     line-height: .9;
-    font-weight: bold;
+    /* font-weight: bold; */
     display: inline-block;
-    border: 15px solid #fff;
-    padding: 30px;
-    font-size: 9rem;
+    /* font-size: 50px; */
+    text-align: left;
+    border: 5px solid #fff;
+    padding: 20px;
+    /* font-size: 9rem; */
     opacity: 0;
     animation: 1s fadeInFromTop cubic-bezier(0.785, 0.135, 0.15, 0.86) 1s forwards;
-    animation-delay: .8s; }
+    animation-delay: .8s; 
+    width: 600px;
+    height: 854px;
+
+  }
 
 .jumbotron-single h1 {
   font-size: 3rem !important; }
@@ -758,3 +764,60 @@ section {
     font-size: 16px; } }
 
 /*=====  End of RESPONSIVE  ======*/
+.form-container  {
+  width: 300px;
+  height: 200px;
+  display: grid;
+  grid-template-columns: 300px 250px;
+
+}
+.input-description {
+  text-align: left;
+  font-size: 20px;
+  font-weight: bold;
+  margin-right: 30px;
+  margin-bottom: 60px;
+  width: 300px;
+  height: 0;
+  
+}
+.input-style {
+  height: 35px;
+  margin-bottom: 10px;
+  width: 250px;
+  justify-content: center;
+  align-content: center;
+  font-size: 15px;
+  border-radius: 5px;
+  border: none;
+
+}
+.select-styling {
+  color: #444;
+  line-height: 28px;
+  font-size: 20px;
+  height: 44px;
+  display: block;
+
+}
+.submit-button {
+  background-color: #ff00cc;
+  color: white;
+  height: 43px;
+  border: none;
+  width: 141px;
+  border-radius: 18px;
+  font-weight: bold;
+  font-size: 28px;
+  cursor: pointer;
+  transform: box-shadow 0.15s;
+  margin-left: 405px;
+  margin-bottom: 20px;
+  
+}
+.submit-button:hover {
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.15);
+}
+::placeholder {
+  text-align: center;
+}

@@ -22,7 +22,7 @@ h6,
 .h4,
 .h5,
 .h6 {
-  font-family: 'Work Sans', sans-serif;
+  font-family: 'Quicksand', sans-serif;
   margin-top: 0; }
 
 a {
@@ -74,7 +74,8 @@ section {
 
 .navbar-brand {
   font-size: 40px;
-  color: #000; }
+  color: white;
+}
 
 .navbar-nav .nav-link {
   color: #fff;
@@ -820,4 +821,20 @@ section {
 }
 ::placeholder {
   text-align: center;
+}
+
+.results-button {
+  display: block;
+  background-color: #ff00cc;
+  color: white;
+  height: 43px;
+  border: none;
+  width: 141px;
+  border-radius: 18px;
+  font-weight: bold;
+  font-size: 28px;
+  cursor: pointer;
+  transform: box-shadow 0.15s;
+  margin-bottom: 29px;
+  margin-left: 250px;
 }

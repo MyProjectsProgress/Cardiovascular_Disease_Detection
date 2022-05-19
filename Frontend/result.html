@@ -45,73 +45,115 @@
 	</div>
 	
 </div>	<div class="jumbotron d-flex align-items-center">
-  <div class="container text-center">
-	<!-- <h1 class="display-1 mb-4"> -->
-	<!-- <form class="form-container" id="submit-form" method="post" method="get" action="result.html"> -->
-		<!-- <h2 class="input-description">Name: <span id="result-name"></span></h2>
-		<h2 class="input-description">Age: <span id="result-age"></span></h2>
-		<p class="input-description">Presence or absence of cardiovascular disease:</p>
-		<select  class="select-styling">
-			<option value="Select">Select</option>
-			<option value="Yes">Yes</option>
-			<option value="No">No</option>
-		</select>
-		<div class="heart"></div> -->
-		<div class="header_fixed">
-			<table>
-				<thead>
-					<tr>
-						<th>Name</th>
-						<th>Age</th>
-						<th>Presence of Cardiovascular disease</th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr>
-						<td>Mazen</td>
-						<td>21</td>
-						<td>No</td>
-					</tr>
-					<tr>
-						<td>Mazen</td>
-						<td>21</td>
-						<td>No</td>
-					</tr>
-					<tr>
-						<td>Mazen</td>
-						<td>21</td>
-						<td>No</td>
-					</tr>
-					<tr>
-						<td>Mazen</td>
-						<td>21</td>
-						<td>No</td>
-					</tr>
-					<tr>
-						<td>Mazen</td>
-						<td>21</td>
-						<td>No</td>
-					</tr>
-					<tr>
-						<td>Mazen</td>
-						<td>21</td>
-						<td>No</td>
-					</tr>
-					<tr>
-						<td>Mazen</td>
-						<td>21</td>
-						<td>No</td>
-					</tr>
-					<tr>
-						<td>Mazen</td>
-						<td>21</td>
-						<td>No</td>
-					</tr>
-				</tbody>
-			</table>
-		</div>
+	
+	<div class="container text-center">
+		<div class="wrapper">
+			<div class="header">
+			  <div class="title">
+				Results
+			  </div>
+		  
+			  <div class="search_box">
+				<input type="text" id="search_input" placeholder="Fliter Table Using Names">
+			  </div>
+			</div>
+		  
+			<div class="table_wrap">
+			  <div class="table_header">
+				<ul>
+				  <li>
+					<div class="item">
+					  <div class="name">
+						<span>NAME</span>
+					  </div>
+					  <div class="phone">
+						<span>AGE</span>
+					  </div>
+					  <div class="issue">
+						<span>HEIGHT (CM)</span>
+					  </div>
+					  <div class="status">
+						<span>RESULT</span>
+					  </div>
+					</div>
+				  </li>
+				</ul>
+			  </div>
+			  <div class="table_body">
+				<ul>
+				  <li>
+					<div class="item">
+					  <div class="name">
+						<span>Mazen</span>
+					  </div>
+					  <div class="phone">
+						<span>21</span>
+					  </div>
+					  <div class="issue">
+						<span>200</span>
+					  </div>
+					  <div class="status">
+						<span class="open">No</span>
+					  </div>
+					</div>
+				  </li>
+				  <li>
+					<div class="item">
+					  <div class="name">
+						<span>Ahmed</span>
+					  </div>
+					  <div class="phone">
+						<span>20</span>
+					  </div>
+					  <div class="issue">
+						<span>180</span>
+					  </div>
+					  <div class="status">
+						<span class="closed">Yes</span>
+					  </div>
+					</div>
+				  </li>
+				  <li>
+					<div class="item">
+					  <div class="name">
+						<span>Zeyad</span>
+					  </div>
+					  <div class="phone">
+						<span>20</span>
+					  </div>
+					  <div class="issue">
+						<span>160</span>
+					  </div>
+					  <div class="status">
+						<span class="open">No</span>
+					  </div>
+					</div>
+				  </li>
+				  <li>
+					<div class="item">
+					  <div class="name">
+						<span>Magdy</span>
+					  </div>
+					  <div class="phone">
+						<span>20</span>
+					  </div>
+					  <div class="issue">
+						<span>165</span>
+					  </div>
+					  <div class="status">
+						<span class="closed">Yes</span>
+					  </div>
+					</div>
+				  </li>
+				</ul>
+			  </div>
+			  <div class="table_footer"></div>
+			</div>
+		  
+		  </div>
+	</div>
 
-	</h1>
+	
   </div>
   <div class="rectangle-1"></div>
   <div class="rectangle-2"></div>
@@ -151,5 +193,6 @@
 	<script src="./client.js"></script>
 	<script src="./finalpage.js"></script>
 	<script src="request.js"></script>
+	<script src="./tablesearch.js"></script>
 </body>
 </html>

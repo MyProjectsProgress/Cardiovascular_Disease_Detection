@@ -1,3 +1,4 @@
+$(".err").hide();
 const submitForm = document.getElementById("submit-form");
 const baseEndpoint = "http://localhost:8000";
 if (submitForm) {
@@ -10,7 +11,7 @@ function handleSubmit(event) {
   let submitFormData = new FormData(submitForm);
   let submitObjectData = Object.fromEntries(submitFormData);
   let bodyStr = JSON.stringify(submitObjectData);
-  console.log(submitObjectData, bodyStr);
+  // console.log(submitObjectData, bodyStr);
 
   const options = {
     method: "post",
@@ -22,10 +23,15 @@ function handleSubmit(event) {
   fetch(submitEndpoint, options)
     .then((response) => {
       console.log(response);
+      if (response.status === 400) {
+        $(".err").show();
+      } else {
+        $(".err").hide();
+      }
       return response.json();
     })
     .then((x) => {
-      console.log(x);
+      window.location.replace("./result.html");
     })
     .catch((err) => {
       console.log("err", err);

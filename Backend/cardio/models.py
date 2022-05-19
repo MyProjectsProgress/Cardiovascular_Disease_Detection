@@ -31,17 +31,18 @@ GLUCOSE = (
 
 
 class Data(models.Model):
-    name = models.CharField(max_length=100, null=True)
-    age = models.PositiveIntegerField(null=True)
-    hieght = models.PositiveIntegerField(null=True)
-    weight = models.FloatField(null=True)
-    gender = models.PositiveIntegerField(choices=GENDER, null=True)
-    ap_hi = models.PositiveIntegerField(null=True)  # Systolic blood pressure
-    ap_lo = models.PositiveIntegerField(null=True)  # Diastolic blood pressure
-    cholesterol = models.PositiveIntegerField(choices=CHOLESTEROL, null=True)
-    gluc = models.PositiveIntegerField(choices=GLUCOSE, null=True)
-    smoking = models.PositiveIntegerField(choices=SMOKE, null=True)
-    alco = models.PositiveIntegerField(choices=ALCOHOL, null=True)
-    active = models.PositiveIntegerField(choices=ACTIVE, null=True)
+    name = models.CharField(max_length=100, blank=False)
+    age = models.PositiveIntegerField(blank=False)
+    hieght = models.PositiveIntegerField(blank=False)
+    weight = models.FloatField(blank=False)
+    gender = models.PositiveIntegerField(choices=GENDER, blank=False)
+    ap_hi = models.PositiveIntegerField(blank=False)  # Systolic blood pressure
+    ap_lo = models.PositiveIntegerField(
+        blank=False)  # Diastolic blood pressure
+    cholesterol = models.PositiveIntegerField(choices=CHOLESTEROL, blank=False)
+    gluc = models.PositiveIntegerField(choices=GLUCOSE, blank=False)
+    smoking = models.PositiveIntegerField(choices=SMOKE, blank=False)
+    alco = models.PositiveIntegerField(choices=ALCOHOL, blank=False)
+    active = models.PositiveIntegerField(choices=ACTIVE, blank=False)
     cardio = models.CharField(max_length=100, blank=True)
     date = models.DateTimeField(auto_now_add=True)

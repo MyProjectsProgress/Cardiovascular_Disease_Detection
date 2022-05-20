@@ -50,8 +50,6 @@ img {
 .fs-40 {
   font-size: 40px; }
 
-section {
-  position: relative; }
 
 .section-content {
   padding-top: 80px;
@@ -136,7 +134,8 @@ section {
     animation: 1s fadeInFromTop cubic-bezier(0.785, 0.135, 0.15, 0.86) 1s forwards;
     animation-delay: .8s; 
     width: 600px;
-    height: 854px;
+    height: 645px;
+    
 
   }
 
@@ -813,7 +812,7 @@ section {
   cursor: pointer;
   transform: box-shadow 0.15s;
   margin-left: 405px;
-  margin-top: 34px;
+  margin-top: 178px;
   
 }
 .submit-button:hover {
@@ -836,6 +835,80 @@ section {
   cursor: pointer;
   transform: box-shadow 0.15s;
   margin-top: -71px;
-  margin-bottom: 115px;
+  margin-bottom: 55px;
   margin-left: -190px;
+  font-family: 'Quicksand', sans-serif;
 }
+
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Montserrat";
+}
+section {
+  min-height: 57vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+}
+.container {
+  max-width: 400px;
+  width: 90%;
+  padding: 20px;
+  box-shadow: none;
+  border-radius: 8px;
+  background-color: transparent;
+}
+.step {
+  display: none;
+}
+.step.active {
+  display: block;
+}
+.form-group {
+  width: 100%;
+  margin-top: 20px;
+}
+.form-group input {
+  width: 100%;
+  border: 1.5px solid rgba(128, 128, 128, 0.418);
+  padding: 5px;
+  font-size: 18px;
+  margin-top: 5px;
+  border-radius: 4px;
+}
+
+button.next-btn,
+button.previous-btn,
+button.submit-btn {
+  float: right;
+  display: block;
+  background-color: #ff00cc;
+  color: white;
+  height: 43px;
+  border: none;
+  width: 141px;
+  border-radius: 18px;
+  font-weight: bold;
+  font-size: 28px;
+  cursor: pointer;
+  transform: box-shadow 0.15s;
+  cursor: pointer;
+  /* text-align: right; */
+}
+button.previous-btn {
+  float: left;
+}
+button.submit-btn {
+  background-color: aquamarine;
+}
+ label {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 32px;
+ }

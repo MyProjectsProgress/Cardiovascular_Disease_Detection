@@ -40,92 +40,129 @@
       <div class="container text-center">
       <a class="results-button" href="./result.html">Results</a>
         <h1 class=" mb-4">
-          <form
-            class="form-container"
-            id="submit-form"
-            method="POST"
-            method="get"
-            action="result.html"
-          >
-            <p class="input-description">Name</p>
-            <input
-              type="text"
-              class="input-style"
-              id="name"
-              name="name"
-              placeholder="Enter your name"
-            />
-            <p class="input-description">Age</p>
-            <input
-              type="number"
-              class="input-style"
-              id="age"
-              name="age"
-              placeholder="Enter your age"
-            />
-            <p class="input-description">Height</p>
-            <input
-              type="number"
-              class="input-style"
-              name="hieght"
-              placeholder="Enter your height in CM"
-            />
-            <p class="input-description">Weight</p>
-            <input
-              type="number"
-              class="input-style"
-              name="weight"
-              placeholder="Enter your weight in Kg"
-            />
-            <p class="input-description">Gender</p>
-            <select name="gender" class="select-styling">
-              <option value="2">Male</option>
-              <option value="1">Female</option>
-            </select>
-            <p class="input-description">Systolic blood pressure</p>
-            <input type="number" class="input-style" name="ap_hi" />
-            <p class="input-description">Diastolic blood pressure</p>
-            <input type="number" class="input-style" name="ap_lo" />
-            <p class="input-description">Cholesterol</p>
-            <select class="select-styling" name="cholesterol">
-              <option value="1">Normal</option>
-              <option value="2">Above normal</option>
-              <option value="3">Well above normal</option>
-            </select>
-            <p class="input-description">Glucose</p>
-            <select class="select-styling" name="gluc">
-              <option value="1">Normal</option>
-              <option value="2">Above normal</option>
-              <option value="3">Well above normal</option>
-            </select>
-            <p class="input-description">Smoking</p>
-            <select class="select-styling" name="smoking">
-              <option value="1">Yes</option>
-              <option value="0">No</option>
-            </select>
-            <p class="input-description">Alcohol intake</p>
-            <select class="select-styling" name="alco">
-              <option value="1">Yes</option>
-              <option value="0">No</option>
-            </select>
-            <p class="input-description">Physical activity</p>
-            <select class="select-styling" name="active">
-              <option value="1">Yes</option>
-              <option value="0">No</option>
-            </select>
- 
-            <div class="heart"></div>
-            <!-- <button class="submit-button" value="submit" onclick="myOnClickFn()">Submit</button> -->
-            <input
-              target="_link"
-              class="submit-button"
-              type="submit"
-              onClick="myFunction()"
-              onclick="passvalues();"
-              href="./result.html"
-            />
-		</form>
-	</h1>
+        <section>
+            <div class="container-1">
+              <form id="submit-form"
+              method="POST"
+              method="get"
+              action="result.html">
+          
+                <div class="step step-1 active">
+                  <div class="form-group">
+                    <label for="name">Name</label>
+                    <input
+                    type="text"
+                    class="input-style"
+                    id="name"
+                    name="name"
+                    placeholder="Enter your name"
+                  />
+                  </div>
+                  <div class="form-group">
+                    <label for="age">Age</label>
+                    <input
+                    type="number"
+                    class="input-style"
+                    id="age"
+                    name="age"
+                    placeholder="Enter your age"
+                  />
+                  </div>
+                  <div class="form-group">
+                    <label for="height">Height</label>
+                    <input
+                    type="number"
+                    class="input-style"
+                    name="hieght"
+                    placeholder="Enter your height in CM"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="weight">Weight</label>
+                    <input
+                    type="number"
+                    class="input-style"
+                    name="hieght"
+                    placeholder="Enter your weight in Kg"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="gender">Gender</label>
+                    <select name="gender" class="select-styling">
+                        <option value="2">Male</option>
+                        <option value="1">Female</option>
+                      </select>
+                  </div>
+                  <button type="button" class="next-btn">Next</button>
+                </div>
+          
+                <div class="step step-2">
+                  <div class="form-group">
+                    <label for="Systolic blood pressure">Systolic blood pressure</label>
+                    <input type="number" class="input-style" name="ap_hi" />
+                  </div>
+                  <div class="form-group">
+                    <label for="Diastolic blood pressure">Diastolic blood pressure</label>
+                    <input type="number" class="input-style" name="ap_lo" />
+                  </div>
+                  <button type="button" class="previous-btn">Prev</button>
+                  <button type="button" class="next-btn">Next</button>
+                </div>
+          
+                <div class="step step-3">
+                  <div class="form-group">
+                    <label for="Cholesterol">Cholesterol</label>
+                    <select class="select-styling" name="cholesterol">
+                        <option value="1">Normal</option>
+                        <option value="2">Above normal</option>
+                        <option value="3">Well above normal</option>
+                      </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="Glucose">Glucose</label>
+                    <select class="select-styling" name="gluc">
+                        <option value="1">Normal</option>
+                        <option value="2">Above normal</option>
+                        <option value="3">Well above normal</option>
+                      </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="Smoking">Smoking</label>
+                    <select class="select-styling" name="smoking">
+                        <option value="1">Yes</option>
+                        <option value="0">No</option>
+                      </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="Alcohol intake">Alcohol intake</label>
+                    <select class="select-styling" name="alco">
+                        <option value="1">Yes</option>
+                        <option value="0">No</option>
+                      </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="Physical activity">Physical activity</label>
+                    <select class="select-styling" name="active">
+                        <option value="1">Yes</option>
+                        <option value="0">No</option>
+                      </select>
+                  </div>
+                  <button type="button" class="previous-btn">Prev</button>
+                  <!-- <button type="submit" class="submit-btn">Submit</button> -->
+                  <input
+                    target="_link"
+                    class="submit-button"
+                    type="submit"
+                    onClick="myFunction()"
+                    onclick="passvalues();"
+                    href="./result.html"
+                    />
+                </div>
+                <div class="heart"></div>
+              </form>
+            </div>
+          </section>
+	<!-- </h1> -->
 	<div class="alert alert-danger err" role="alert">
 		Please fill all fields
 	  </div>
@@ -171,5 +208,6 @@
 
     <script src="js/app.min.js "></script>
     <script src="./client.js"></script>
+    <script src="./multisteps.js"></script>
   </body>
 </html>

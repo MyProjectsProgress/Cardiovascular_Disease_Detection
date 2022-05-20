@@ -6,12 +6,8 @@
 - Make sure you are in the right path
   (ex: "\<folder-location>\Cardiovascular_Disease_Detection\Backend")
 - run these commands in your command prompt
-<<<<<<< HEAD
-=======
-  
- > `py -m venv env`
- > <br>
->>>>>>> 18041fbfe888bcd4cea118d14422895eab3d599b
+
+ 
 
 > `py -m venv env` <br>
 
@@ -19,7 +15,10 @@
 
 > `pip install django` <br>
 
-> `pip install djangorestframework`
+> `pip install djangorestframework`<br>
+> 
+> `pip install django-cors-headers` <br>
+
 
 _these comands works for windows_
 
@@ -28,7 +27,9 @@ _these comands works for windows_
 - Open command Propmt
 - Make sure you are in the right path
   (ex: "\<folder-location>\Cardiovascular_Disease_Detection\Backend")
-- run these commands in your command prompt
+- Make sure there is (env) before your path
+  (if not run `env\Scripts\activate`)
+- run this commands in your command prompt
 
 > `py manage.py runserver`
 

@@ -968,9 +968,9 @@ body {
   display: block;
   background-color: #ff00cc;
   color: white;
+  width: 170px;
   height: 43px;
   border: none;
-  width: 170px;
   border-radius: 18px;
   font-weight: bold;
   font-size: 28px;

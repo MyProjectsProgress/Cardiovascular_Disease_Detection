@@ -122,7 +122,7 @@ img {
     background: linear-gradient(to right, #333399, #ff00cc);
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */ }
   .jumbotron h1 {
-    line-height: .9;
+    line-height: .1;
     /* font-weight: bold; */
     display: inline-block;
     /* font-size: 50px; */
@@ -134,7 +134,7 @@ img {
     animation: 1s fadeInFromTop cubic-bezier(0.785, 0.135, 0.15, 0.86) 1s forwards;
     animation-delay: .8s; 
     width: 600px;
-    height: 645px;
+    height: 486px;
     
 
   }
@@ -812,7 +812,7 @@ img {
   cursor: pointer;
   transform: box-shadow 0.15s;
   margin-left: 405px;
-  margin-top: 178px;
+  margin-top: 110px;
   
 }
 .submit-button:hover {
@@ -850,7 +850,7 @@ body {
   font-family: "Montserrat";
 }
 section {
-  min-height: 57vh;
+  height: -1px;
   width: 100%;
   display: flex;
   align-items: center;
@@ -891,15 +891,16 @@ button.submit-btn {
   display: block;
   background-color: #ff00cc;
   color: white;
-  height: 43px;
+  height: 30px;
   border: none;
-  width: 141px;
+  width: 80px;
   border-radius: 18px;
   font-weight: bold;
   font-size: 28px;
   cursor: pointer;
   transform: box-shadow 0.15s;
   cursor: pointer;
+
   /* text-align: right; */
 }
 button.previous-btn {
@@ -910,5 +911,5 @@ button.submit-btn {
 }
  label {
   font-family: 'Quicksand', sans-serif;
-  font-size: 32px;
+  font-size: 23px;
  }

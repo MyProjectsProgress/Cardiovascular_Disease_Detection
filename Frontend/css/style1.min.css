@@ -22,7 +22,7 @@ h6,
 .h4,
 .h5,
 .h6 {
-  font-family: 'Work Sans', sans-serif;
+  font-family: 'Quicksand', sans-serif;
   margin-top: 0; }
 
 a {
@@ -934,7 +934,7 @@ body {
   display: inline-block;
 }
 
-.table_body ul li .item .open {
+.table_body ul li .item .no {
   background: #e5edfa;
   color: #5a8ee4;
 }
@@ -944,7 +944,7 @@ body {
   color: #0dbeb6;
 }
 
-.table_body ul li .item .closed {
+.table_body ul li .item .yes {
   background: #fedfe5;
   color: #ff89a0;
 }
@@ -964,3 +964,21 @@ body {
   color: #e87060;
 }
 
+.results-button {
+  display: block;
+  background-color: #ff00cc;
+  color: white;
+  height: 43px;
+  border: none;
+  width: 170px;
+  border-radius: 18px;
+  font-weight: bold;
+  font-size: 28px;
+  cursor: pointer;
+  transform: box-shadow 0.15s;
+  margin-top: -71px;
+  margin-bottom: 115px;
+  margin-left: -190px;
+  padding-left: 5px;
+  padding-right: 5px;
+}

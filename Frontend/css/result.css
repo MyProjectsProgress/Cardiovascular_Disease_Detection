@@ -10,7 +10,6 @@ body {
 
 body {
   font-family: 'Quicksand', sans-serif;
-  font-weight: 300;
 }
 
 h1,
@@ -765,7 +764,6 @@ section {
   position: relative;
   padding: 10px 0;
 }
-<<<<<<< HEAD:Frontend/css/result.css
 
 .skill-item p {
   font-size: 16px;
@@ -774,16 +772,6 @@ section {
   font-weight: 500;
 }
 
-=======
-
-.skill-item p {
-  font-size: 16px;
-  text-transform: uppercase;
-  display: inline-block;
-  font-weight: 500;
-}
-
->>>>>>> 7646b7cf9bdcec4f7aca35a8beafd2dc15464689:Frontend/css/style1.min.css
 .skill-item .text-muted {
   color: #939393;
 }
@@ -1115,6 +1103,8 @@ body {
 .table_wrap ul li .item .status {
   width: 15%;
   padding: 0 15px;
+  display: flex;
+  align-items: center;
 }
 
 .table_wrap ul li .item .issue {
@@ -1139,6 +1129,8 @@ body {
 .table_body {
   height: 300px;
   overflow: auto;
+  font-weight: 400;
+
 }
 
 .table_body ul li .item {

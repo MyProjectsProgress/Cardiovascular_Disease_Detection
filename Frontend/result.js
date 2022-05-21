@@ -10,7 +10,12 @@ $.ajax({
   },
 });
 function showData(obj) {
-  var row = `
+	let result = 'No'
+	console.log(obj.cardio[1]);
+	if (obj.cardio[1] == 1) {
+		result = 'Yes'
+	} 
+  let row = `
   <li>
 					<div class="item">
 					  <div class="name">
@@ -23,7 +28,7 @@ function showData(obj) {
 						<span>${obj.hieght}</span>
 					  </div>
 					  <div class="status">
-						<span class="open">No</span>
+						<span class="${result}">${result}</span>
 					  </div>
 					</div>
 				  </li>`;

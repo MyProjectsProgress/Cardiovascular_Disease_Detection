@@ -19,6 +19,8 @@
 > 
 > `pip install django-cors-headers` <br>
 
+> `pip install sklearn` <br>
+
 
 _these comands works for windows_
 

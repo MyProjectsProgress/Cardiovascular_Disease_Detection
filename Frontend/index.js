@@ -30,8 +30,9 @@ function handleSubmit(event) {
       }
       return response.json();
     })
-    .then((x) => {
-      window.location.replace("./result.html");
+    .then((response) => {
+      console.log(response.cardio);
+      // window.location.replace("./result.html");
     })
     .catch((err) => {
       console.log("err", err);

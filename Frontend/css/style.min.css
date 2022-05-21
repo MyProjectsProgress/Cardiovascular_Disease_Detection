@@ -134,7 +134,7 @@ img {
     animation: 1s fadeInFromTop cubic-bezier(0.785, 0.135, 0.15, 0.86) 1s forwards;
     animation-delay: .8s; 
     width: 600px;
-    height: 486px;
+    height: 480px;
     
 
   }
@@ -812,7 +812,7 @@ img {
   cursor: pointer;
   transform: box-shadow 0.15s;
   margin-left: 405px;
-  margin-top: 110px;
+  margin-top: -16px;
   
 }
 .submit-button:hover {
@@ -885,7 +885,6 @@ section {
 }
 
 button.next-btn,
-button.previous-btn,
 button.submit-btn {
   float: right;
   display: block;
@@ -905,6 +904,20 @@ button.submit-btn {
 }
 button.previous-btn {
   float: left;
+  display: block;
+  background-color: #ff00cc;
+  color: white;
+  height: 30px;
+  border: none;
+  width: 80px;
+  border-radius: 18px;
+  font-weight: bold;
+  font-size: 28px;
+  cursor: pointer;
+  transform: box-shadow 0.15s;
+  cursor: pointer;
+  margin-left: 110px;
+  margin-top: 10px;
 }
 button.submit-btn {
   background-color: aquamarine;
@@ -913,3 +926,10 @@ button.submit-btn {
   font-family: 'Quicksand', sans-serif;
   font-size: 23px;
  }
+.cont {
+  display: grid;
+  grid-template-columns: 263px 241px;
+  margin-top: -18px;
+  
+}
+

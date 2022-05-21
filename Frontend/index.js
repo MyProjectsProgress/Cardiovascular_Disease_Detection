@@ -1,4 +1,4 @@
-$(".err").hide();
+$("#errMsg").hide();
 const submitForm = document.getElementById("submit-form");
 const baseEndpoint = "http://localhost:8000";
 if (submitForm) {
@@ -24,9 +24,9 @@ function handleSubmit(event) {
     .then((response) => {
       console.log(response);
       if (response.status === 400) {
-        $(".err").show();
+        $("#errMsg").show();
       } else {
-        $(".err").hide();
+        $("#errMsg").hide();
       }
       return response.json();
     })

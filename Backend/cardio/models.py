@@ -1,4 +1,6 @@
 from django.db import models
+from sklearn.tree import DecisionTreeClassifier
+import joblib
 
 # Create your models here.
 
@@ -46,3 +48,11 @@ class Data(models.Model):
     active = models.PositiveIntegerField(choices=ACTIVE, blank=False)
     cardio = models.CharField(max_length=100, blank=True)
     date = models.DateTimeField(auto_now_add=True)
+
+    def save(self, *args, **kwargs):
+        ml_model = joblib.load(
+            '../Machine Learning/Cardiovascular_Disease_Detection_ml.joblib')
+        self.cardio = ml_model.predict([[self.age, self.hieght, self.weight, self.gender, self.ap_hi,
+                                         self.ap_lo, self.cholesterol, self.gluc, self.smoking, self.alco, self.active]])
+
+        return super().save(*args, **kwargs)

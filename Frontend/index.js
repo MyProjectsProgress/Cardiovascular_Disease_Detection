@@ -32,7 +32,7 @@ function handleSubmit(event) {
     })
     .then((response) => {
       console.log(response.cardio);
-      // window.location.replace("./result.html");
+      window.location.replace("./result.html");
     })
     .catch((err) => {
       console.log("err", err);

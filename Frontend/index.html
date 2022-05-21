@@ -1,210 +1,163 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Cardiovascular disease detection</title>
-    <meta name="description" content="Roxy" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-      />
-    <link rel="stylesheet" href="vendor/bootstrap/bootstrap.min.css" />
-    <link rel="stylesheet" href="vendor/select2/select2.min.css" />
-    <link rel="stylesheet" href="vendor/owlcarousel/owl.carousel.min.css" />
-    <link rel="stylesheet" href="vendor/lightcase/lightcase.css" />
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"
-      rel="stylesheet">
-    <link
-      href="https://fonts.googleapis.com/css?family=Lato:300,400|Work+Sans:300,400,700"
-      rel="stylesheet"
-      />
-    <link rel="stylesheet" href="css/style.min.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css"
-      />
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
-      crossorigin="anonymous"
-      />
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
-    <link rel="stylesheet" href="css/heart.css" />
-  </head>
-  <body data-spy="scroll" data-target="#navbar" class="static-layout">
-    <div class="jumbotron d-flex align-items-center">
-      <div class="container text-center">
-        <a class="results-button" href="./result.html">Results</a>
-        <h1 class="mb-4">
-          <section>
-            <div class="container-1">
-              <form id="submit-form"
-                method="POST"
-                method="get"
-                action="result.html">
 
-                <div class="step step-1 active">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Cardiovascular disease detection</title>
+  <meta name="description" content="Roxy" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <link rel="stylesheet" href="vendor/bootstrap/bootstrap.min.css" />
+  <link rel="stylesheet" href="vendor/select2/select2.min.css" />
+  <link rel="stylesheet" href="vendor/owlcarousel/owl.carousel.min.css" />
+  <link rel="stylesheet" href="vendor/lightcase/lightcase.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400|Work+Sans:300,400,700" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.min.css" />
+  <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
+  <link rel="stylesheet" href="css/heart.css" />
+</head>
+
+<body data-spy="scroll" data-target="#navbar" class="static-layout">
+  <div class="jumbotron d-flex align-items-center">
+    <div class="container text-center">
+      <a class="results-button" href="./result.html">Results</a>
+      <h1>
+        <section class="mb-4">
+          <div class="container-1">
+            <form id="submit-form" method="POST" method="get" action="result.html">
+
+              <div class="step step-1 active">
+                <div class="form-group">
+                  <label for="name">Name</label>
+                  <input type="text" class="input-style" id="name" name="name" placeholder="Enter your name" />
+                </div>
+                <div class="form-group">
+                  <label for="age">Age</label>
+                  <input type="number" class="input-style" id="age" name="age" placeholder="Enter your age" />
+                </div>
+                <div class="form-group">
+                  <label for="hieght">Height</label>
+                  <input type="number" class="input-style" name="hieght" placeholder="Enter your height in CM" />
+                </div>
+                <div class="form-group">
+                  <label for="weight">Weight</label>
+                  <input type="number" class="input-style" name="weight" placeholder="Enter your weight in Kg" />
+                </div>
+                <div class="form-group">
+                  <label for="gender">Gender</label>
+                  <select name="gender" class="select-styling">
+                    <option value="2">Male</option>
+                    <option value="1">Female</option>
+                  </select>
+                </div>
+                <button type="button" class="next-btn">Next</button>
+              </div>
+
+              <div class="step step-2">
+                <div class="form-group">
+                  <label for="Systolic blood pressure">Systolic blood pressure</label>
+                  <input type="number" class="input-style" name="ap_hi" />
+                </div>
+                <div class="form-group">
+                  <label for="Diastolic blood pressure">Diastolic blood
+                    pressure</label>
+                  <input type="number" class="input-style" name="ap_lo" />
+                </div>
+                <div class="cont">
                   <div class="form-group">
-                    <label for="name">Name</label>
-                    <input
-                      type="text"
-                      class="input-style"
-                      id="name"
-                      name="name"
-                      placeholder="Enter your name"
-                      />
-                  </div>
-                  <div class="form-group">
-                    <label for="age">Age</label>
-                    <input
-                      type="number"
-                      class="input-style"
-                      id="age"
-                      name="age"
-                      placeholder="Enter your age"
-                      />
-                  </div>
-                  <div class="form-group">
-                    <label for="hieght">Hieght</label>
-                    <input
-                      type="number"
-                      class="input-style"
-                      name="hieght"
-                      placeholder="Enter your height in CM"
-                      />
-                  </div>
-                  <div class="form-group">
-                    <label for="weight">Weight</label>
-                    <input
-                      type="number"
-                      class="input-style"
-                      name="weight"
-                      placeholder="Enter your weight in Kg"
-                      />
-                  </div>
-                  <div class="form-group">
-                    <label for="gender">Gender</label>
-                    <select name="gender" class="select-styling">
-                      <option value="2">Male</option>
-                      <option value="1">Female</option>
+                    <label for="Cholesterol">Cholesterol</label>
+                    <select class="select-styling" name="cholesterol">
+                      <option value="1">Normal</option>
+                      <option value="2">Above normal</option>
+                      <option value="3">Well above normal</option>
                     </select>
                   </div>
-                  <button type="button" class="next-btn">Next</button>
+                  <div class="form-group">
+                    <label for="Glucose">Glucose</label>
+                    <select class="select-styling" name="gluc">
+                      <option value="1">Normal</option>
+                      <option value="2">Above normal</option>
+                      <option value="3">Well above normal</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="Smoking">Smoking</label>
+                    <select class="select-styling" name="smoking">
+                      <option value="1">Yes</option>
+                      <option value="0">No</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="Alcohol intake">Alcohol intake</label>
+                    <select class="select-styling" name="alco">
+                      <option value="1">Yes</option>
+                      <option value="0">No</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="Physical activity">Physical activity</label>
+                    <select class="select-styling" name="active">
+                      <option value="1">Yes</option>
+                      <option value="0">No</option>
+                    </select>
+                  </div>
                 </div>
 
-                <div class="step step-2">
-                  <div class="form-group">
-                    <label for="Systolic blood pressure">Systolic blood pressure</label>
-                    <input type="number" class="input-style" name="ap_hi" />
-                  </div>
-                  <div class="form-group">
-                    <label for="Diastolic blood pressure">Diastolic blood
-                      pressure</label>
-                    <input type="number" class="input-style" name="ap_lo" />
-                  </div>
-                  <div class="cont">
-                    <div class="form-group">
-                      <label for="Cholesterol">Cholesterol</label>
-                      <select class="select-styling" name="cholesterol">
-                        <option value="1">Normal</option>
-                        <option value="2">Above normal</option>
-                        <option value="3">Well above normal</option>
-                      </select>
-                    </div>
-                    <div class="form-group">
-                      <label for="Glucose">Glucose</label>
-                      <select class="select-styling" name="gluc">
-                        <option value="1">Normal</option>
-                        <option value="2">Above normal</option>
-                        <option value="3">Well above normal</option>
-                      </select>
-                    </div>
-                    <div class="form-group">
-                      <label for="Smoking">Smoking</label>
-                      <select class="select-styling" name="smoking">
-                        <option value="1">Yes</option>
-                        <option value="0">No</option>
-                      </select>
-                    </div>
-                    <div class="form-group">
-                      <label for="Alcohol intake">Alcohol intake</label>
-                      <select class="select-styling" name="alco">
-                        <option value="1">Yes</option>
-                        <option value="0">No</option>
-                      </select>
-                    </div>
-                    <div class="form-group">
-                      <label for="Physical activity">Physical activity</label>
-                      <select class="select-styling" name="active">
-                        <option value="1">Yes</option>
-                        <option value="0">No</option>
-                      </select>
-                    </div>
-                  </div>
-
-                  <button type="button" class="previous-btn">Prev</button>
-                  <input
-                    target="_link"
-                    class="submit-button"
-                    type="submit"
-                    href="./result.html"
-                    />
-                </div>
-                <div class="heart"></div>
-              </form>
-            </div>
-          </section>
-          <!-- </h1> -->
-          <div class="alert alert-danger err" role="alert">
-            Please fill all fields
+                <button type="button" class="previous-btn">Prev</button>
+                <input target="_link" class="submit-button" type="submit" href="./result.html" />
+              </div>
+              <div class="heart"></div>
+            </form>
           </div>
-        </div>
-        <div class="rectangle-1"></div>
-        <div class="rectangle-2"></div>
-        <div class="rectangle-transparent-1"></div>
-        <div class="rectangle-transparent-2"></div>
-        <div class="circle-1"></div>
-        <div class="circle-2"></div>
-        <div class="circle-3"></div>
-        <div class="triangle triangle-1">
-          <img src="img/obj_triangle.png" alt="" />
-        </div>
-        <div class="triangle triangle-2">
-          <img src="img/obj_triangle.png" alt="" />
-        </div>
-        <div class="triangle triangle-3">
-          <img src="img/obj_triangle.png" alt="" />
-        </div>
-        <div class="triangle triangle-4">
-          <img src="img/obj_triangle.png" alt="" />
-        </div>
+        </section>
+      </h1>
+      <div class="alert alert-danger err" role="alert">
+        Please fill all fields
       </div>
+    </div>
+    <div class="rectangle-1"></div>
+    <div class="rectangle-2"></div>
+    <div class="rectangle-transparent-1"></div>
+    <div class="rectangle-transparent-2"></div>
+    <div class="circle-1"></div>
+    <div class="circle-2"></div>
+    <div class="circle-3"></div>
+    <div class="triangle triangle-1">
+      <img src="img/obj_triangle.png" alt="" />
+    </div>
+    <div class="triangle triangle-2">
+      <img src="img/obj_triangle.png" alt="" />
+    </div>
+    <div class="triangle triangle-3">
+      <img src="img/obj_triangle.png" alt="" />
+    </div>
+    <div class="triangle triangle-4">
+      <img src="img/obj_triangle.png" alt="" />
+    </div>
+  </div>
 
-      <script
-        type="text/javascript"
-        src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js"></script>
-      <script src="vendor/bootstrap/popper.min.js"></script>
-      <script src="vendor/bootstrap/bootstrap.min.js"></script>
-      <script src="vendor/select2/select2.min.js"></script>
-      <script src="vendor/owlcarousel/owl.carousel.min.js"></script>
-      <script
-        src="vendor/stellar/jquery.stellar.js"
-        type="text/javascript"
-        charset="utf-8"></script>
-      <script src="vendor/isotope/isotope.min.js"></script>
-      <script src="vendor/lightcase/lightcase.js"></script>
-      <script src="vendor/waypoints/waypoint.min.js"></script>
-      <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js"></script>
+  <script src="vendor/bootstrap/popper.min.js"></script>
+  <script src="vendor/bootstrap/bootstrap.min.js"></script>
+  <script src="vendor/select2/select2.min.js"></script>
+  <script src="vendor/owlcarousel/owl.carousel.min.js"></script>
+  <script src="vendor/stellar/jquery.stellar.js" type="text/javascript" charset="utf-8"></script>
+  <script src="vendor/isotope/isotope.min.js"></script>
+  <script src="vendor/lightcase/lightcase.js"></script>
+  <script src="vendor/waypoints/waypoint.min.js"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 
-      <script src="js/app.min.js"></script>
-      <script src="./index.js"></script>
-      <script src="./multisteps.js"></script>
-    </body>
-  </html>
+  <script src="js/app.min.js"></script>
+  <script src="./index.js"></script>
+  <script src="./multisteps.js"></script>
+</body>
+
+</html>

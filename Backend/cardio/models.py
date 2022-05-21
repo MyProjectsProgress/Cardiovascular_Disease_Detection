@@ -3,7 +3,6 @@ from sklearn.tree import DecisionTreeClassifier
 import joblib
 
 # Create your models here.
-
 GENDER = (
     (1, 'Female'),
     (2, 'Male')

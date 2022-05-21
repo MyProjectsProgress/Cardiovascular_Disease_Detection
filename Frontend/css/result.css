@@ -765,6 +765,7 @@ section {
   position: relative;
   padding: 10px 0;
 }
+<<<<<<< HEAD:Frontend/css/result.css
 
 .skill-item p {
   font-size: 16px;
@@ -773,6 +774,16 @@ section {
   font-weight: 500;
 }
 
+=======
+
+.skill-item p {
+  font-size: 16px;
+  text-transform: uppercase;
+  display: inline-block;
+  font-weight: 500;
+}
+
+>>>>>>> 7646b7cf9bdcec4f7aca35a8beafd2dc15464689:Frontend/css/style1.min.css
 .skill-item .text-muted {
   color: #939393;
 }
@@ -1049,7 +1060,7 @@ body {
 }
 
 .wrapper .title {
-  padding: 50px 0;
+  padding: 20px 0 10px 0;
   text-align: center;
   font-weight: 700;
   font-size: 32px;
@@ -1060,7 +1071,7 @@ body {
   max-width: 1000px;
   background: #8E2DE2;
   margin: 0 auto;
-  padding: 25px 0 50px;
+  padding: 0px 0 20px;
   border-radius: 3px;
 }
 
@@ -1175,19 +1186,18 @@ body {
   display: block;
   background-color: #ff00cc;
   color: white;
-  height: 43px;
   border: none;
-  width: 170px;
+  width: 250px;
+  text-align: center;
   border-radius: 18px;
   font-weight: bold;
   font-size: 28px;
   cursor: pointer;
   transform: box-shadow 0.15s;
-  margin-top: -71px;
-  margin-bottom: 115px;
+  padding: 8px;
+  margin-top: -60px;
+  margin-bottom: 40px;
   margin-left: 90px;
-  padding-left: 5px;
-  padding-right: 5px;
   text-decoration: none;
   font-family: 'Quicksand', sans-serif;
 }

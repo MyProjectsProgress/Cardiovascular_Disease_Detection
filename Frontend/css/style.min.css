@@ -928,7 +928,7 @@ button.submit-btn {
  }
 .cont {
   display: grid;
-  grid-template-columns: 263px 241px;
+  grid-template-columns: 310px 260px;
   margin-top: -18px;
   
 }

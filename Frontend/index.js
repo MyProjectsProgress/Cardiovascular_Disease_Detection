@@ -33,7 +33,7 @@ function handleSubmit(event) {
     .then((response) => {
       console.log(response.cardio);
       let result = document.getElementById("resultVal");
-      if(result === 0){
+      if(response.cardio[1] == 0){
         result.innerHTML = "You are in a good health :)"
 
       }else{

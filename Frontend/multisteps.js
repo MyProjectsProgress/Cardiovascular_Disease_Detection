@@ -1,6 +1,6 @@
 const steps = Array.from(document.querySelectorAll("form .step"));
-const nextBtn = document.querySelectorAll("form .next-btn");
-const prevBtn = document.querySelectorAll("form .previous-btn");
+const nextBtn = document.querySelectorAll("form .btn-next");
+const prevBtn = document.querySelectorAll("form .btn-prev");
 const form = document.querySelector("form");
 
 nextBtn.forEach((button) => {
@@ -78,6 +78,7 @@ function firstStepValid() {
   }
   return true
 }
+
 
 const prevBtns = document.querySelectorAll(".btn-prev");
 const nextBtns = document.querySelectorAll(".btn-next");

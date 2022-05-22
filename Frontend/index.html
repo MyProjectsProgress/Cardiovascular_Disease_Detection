@@ -31,7 +31,7 @@
       <a class="results-button" href="./result.html">All Results</a>
       <div class="form-card">
         <h1 class="form-card-child form-card-child-1">Cardiovascular Disease Detection</h1>
-        <form action="#" class="form form-card-child ">
+        <form id="submit-form" method="POST" method="get" action="#" class="form form-card-child ">
           <h1 class="text-center">Check Now</h1>
           <!-- Progress bar -->
           <div class="progressbar">
@@ -54,7 +54,7 @@
             </div>
             <div class="input-group">
               <label for="hieght">Height</label>
-              <input type="number" id="height" name="hieght" placeholder="Enter your height in cm" />
+              <input type="number" id="hieght" name="hieght" placeholder="Enter your height in cm" />
             </div>
 
             <div class="input-group">
@@ -139,14 +139,14 @@
             </div>
             <div class="btns-group">
               <a href="#" class="btn btn-prev">Previous</a>
-              <input type="submit" value="Result >" class="btn btn-next" />
+              <input type="submit" value="Result >" class="btn submit-button btn-next" />
             </div>
           </div>
 
           <div class="form-step">
             <div class="result-value">
               <h1>Result</h1>
-              <h3 class="resultVal">You are in a good health :)</h3>
+              <h3 id="resultVal">Try again!</h3>
             </div>
             <div class="btns-group">
               <a href="#" class="btn btn-prev">Previous</a>

@@ -32,7 +32,14 @@ function handleSubmit(event) {
     })
     .then((response) => {
       console.log(response.cardio);
-      window.location.replace("./result.html");
+      let result = document.getElementById("resultVal");
+      if(result === 0){
+        result.innerHTML = "You are in a good health :)"
+
+      }else{
+        result.innerHTML = "You suffer from cardiovascular disease, so consult your doctor :("
+      }
+      // window.location.replace("./result.html");
     })
     .catch((err) => {
       console.log("err", err);

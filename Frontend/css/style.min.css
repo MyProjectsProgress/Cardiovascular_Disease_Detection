@@ -613,7 +613,7 @@ input {
 /* Form */
 .form {
   width: clamp(400px, 50%, 500px);
-  height: 35vw;
+  height: 70vh;
   margin: 0 0 0 8rem;
   border: 1px solid #ccc;
   border-radius: 1rem;
@@ -633,4 +633,13 @@ input {
   text-align: center;
   font-weight: bold;
 
+}
+
+.err {
+  width: 30%;
+  text-align: center;
+  margin-left: 54rem;
+  margin-top: -5rem;
+  border-radius: 0.8rem;
+  color: #161615;
 }

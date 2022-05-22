@@ -610,6 +610,18 @@ input {
 
 }
 
+.form-card-child-11 {
+  color: white;
+  font-size: 6rem;
+  text-align: left;
+  margin-top: -2rem;
+  margin-left: 2rem;
+  margin-right: 5rem;
+  justify-content: center;
+  font-weight: bold;
+
+}
+
 /* Form */
 .form {
   width: clamp(400px, 50%, 500px);

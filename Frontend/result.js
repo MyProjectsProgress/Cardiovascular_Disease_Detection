@@ -11,7 +11,6 @@ $.ajax({
 });
 function showData(obj) {
 	let result = 'No'
-	console.log(obj.cardio[1]);
 	if (obj.cardio[1] == 1) {
 		result = 'Yes'
 	} 

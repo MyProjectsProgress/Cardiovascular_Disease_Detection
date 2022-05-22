@@ -34,7 +34,7 @@ GLUCOSE = (
 class Data(models.Model):
     name = models.CharField(max_length=100, blank=False)
     age = models.PositiveIntegerField(blank=False)
-    hieght = models.PositiveIntegerField(blank=False)
+    height = models.PositiveIntegerField(blank=False)
     weight = models.FloatField(blank=False)
     gender = models.PositiveIntegerField(choices=GENDER, blank=False)
     ap_hi = models.PositiveIntegerField(blank=False)  # Systolic blood pressure
@@ -51,7 +51,7 @@ class Data(models.Model):
     def save(self, *args, **kwargs):
         ml_model = joblib.load(
             '../Machine Learning/Cardiovascular_Disease_Detection_ml.joblib')
-        self.cardio = ml_model.predict([[self.age, self.hieght, self.weight, self.gender, self.ap_hi,
+        self.cardio = ml_model.predict([[self.age, self.height, self.weight, self.gender, self.ap_hi,
                                          self.ap_lo, self.cholesterol, self.gluc, self.smoking, self.alco, self.active]])
 
         return super().save(*args, **kwargs)

@@ -1,83 +1,164 @@
-const steps = Array.from(document.querySelectorAll("form .step"));
-const nextBtn = document.querySelectorAll("form .btn-next");
-const prevBtn = document.querySelectorAll("form .btn-prev");
-const form = document.querySelector("form");
+// const steps = Array.from(document.querySelectorAll("form .step"));
+// const nextBtn = document.querySelectorAll("form .btn-next");
+// const prevBtn = document.querySelectorAll("form .btn-prev");
+// const form = document.querySelector("form");
 
-nextBtn.forEach((button) => {
-  button.addEventListener("click", () => {
-    changeStep("next");
-  });
-});
-prevBtn.forEach((button) => {
-  button.addEventListener("click", () => {
-    changeStep("prev");
-  });
-});
+// nextBtn.forEach((button) => {
+//   button.addEventListener("click", () => {
+//     changeStep("next");
+//   });
+// });
+// prevBtn.forEach((button) => {
+//   button.addEventListener("click", () => {
+//     changeStep("prev");
+//   });
+// });
 
-form.addEventListener("submit", (e) => {
-  e.preventDefault();
-  const inputs = [];
-  form.querySelectorAll("input").forEach((input) => {
-    const { name, value } = input;
-    inputs.push({ name, value });
-  });
-  console.log(inputs);
-  form.reset();
-});
+// form.addEventListener("submit", (e) => {
+//   e.preventDefault();
+//   const inputs = [];
+//   form.querySelectorAll("input").forEach((input) => {
+//     const { name, value } = input;
+//     inputs.push({ name, value });
+//   });
+//   console.log(inputs);
+//   form.reset();
+// });
 
-function changeStep(btn) {
-  let index = 0;
-  const active = document.querySelector(".active");
-  index = steps.indexOf(active);
-  steps[index].classList.remove("active");
-  if (btn === "next") {
-    if (firstStepValid()) { 
-      index++;
-    }
-  } else if (btn === "prev") {
-    index--;
-  }
-  steps[index].classList.add("active");
-}
+// function changeStep(btn) {
+//   let index = 0;
+//   const active = document.querySelector(".active");
+//   index = steps.indexOf(active);
+//   steps[index].classList.remove("active");
+//   if (btn === "next") {
+//     if (firstStepValid()) { 
+//       index++;
+//     }
+//   } else if (btn === "prev") {
+//     index--;
+//   }
+//   steps[index].classList.add("active");
+// }
 
 //validate the data
 function firstStepValid() {
   let name = document.getElementById("name").value;
   let age = document.getElementById("age").value;
   let height = document.getElementById("height").value;
-  let weight = document.getElementById("weight").value;
-
+  let gender = document.getElementById("gender").value;
+  
   let errMsg = document.getElementById("errMsg")
-
+  
   //name validation
   if (name === '' ) {
     errMsg.innerHTML = "Please enter a name"
     $("#errMsg").show();
     return false;
   }
-
+  
   //age validation
-  if (age > 150 || age < 0) {
+  if (age > 150 || age < 1) {
     errMsg.innerHTML = "invalid age"
     $("#errMsg").show();
     return false;
   }
-
+  
   //height validation
   if (height > 270 || height < 40) {
     errMsg.innerHTML = "invalid height"
     $("#errMsg").show();
     return false;
   }
+  //gender validation
+  if (gender === "") {
+    errMsg.innerHTML = "Please choose a gender"
+    $("#errMsg").show();
+    return false;
+  }
 
+  $("#errMsg").hide();
+  return true
+}
+
+function secondStepValid() {
+  let weight = document.getElementById("weight").value;
+  let smoking = document.getElementById("smoking").value;
+  let alco = document.getElementById("alco").value;
+  let active = document.getElementById("active").value;
+  
+  let errMsg = document.getElementById("errMsg")
+  
   //weight validation
   if (weight > 300 || weight < 2) {
     errMsg.innerHTML = "invalid weight"
     $("#errMsg").show();
     return false;
   }
+  //smoking validation
+  if (smoking === "") {
+    errMsg.innerHTML = "Please choose do you smoke"
+    $("#errMsg").show();
+    return false;
+  }
+  
+  //alco validation
+  if (alco === "") {
+    errMsg.innerHTML = "Please choose do you take alcohol"
+    $("#errMsg").show();
+    return false;
+  }
+  
+  //active validation
+  if (active === "") {
+    errMsg.innerHTML = "Please choose do you exercise"
+    $("#errMsg").show();
+    return false;
+  }
+
+  $("#errMsg").hide();
   return true
 }
+
+function thirdStepValid() {
+  let ap_hi = document.getElementById("ap_hi").value;
+  let ap_lo = document.getElementById("ap_lo").value;
+  let cholesterol = document.getElementById("cholesterol").value;
+  let gluc = document.getElementById("gluc").value;
+  
+  let errMsg = document.getElementById("errMsg")
+  
+  //systolic validation
+  if (ap_hi > 200 || ap_hi < 60) {
+    errMsg.innerHTML = "invalid Systolic blood pressure"
+    $("#errMsg").show();
+    return false;
+  }
+  //diastolic validation
+  if (ap_lo > 160 || ap_lo < 40) {
+    errMsg.innerHTML = "invalid Diastolic blood pressure"
+    $("#errMsg").show();
+    return false;
+  }
+
+  //cholesterol validation
+  if (cholesterol === "") {
+    errMsg.innerHTML = "Please choose cholesterol level"
+    $("#errMsg").show();
+    return false;
+  }
+  
+  //gluc validation
+  if (gluc === "") {
+    errMsg.innerHTML = "Please choose glucose level"
+    $("#errMsg").show();
+    return false;
+  }
+  
+
+  $("#errMsg").hide();
+  return true
+}
+
 
 
 const prevBtns = document.querySelectorAll(".btn-prev");
@@ -90,9 +171,34 @@ let formStepsNum = 0;
 
 nextBtns.forEach((btn) => {
   btn.addEventListener("click", () => {
-    formStepsNum++;
-    updateFormSteps();
-    updateProgressbar();
+    switch (formStepsNum) {
+      case 0:
+        if (firstStepValid()) {
+          formStepsNum++;
+          updateFormSteps();
+          updateProgressbar();
+        }  
+        break; 
+      case 1:
+        if (secondStepValid()) { 
+          formStepsNum++;
+          console.log(formStepsNum)
+          updateFormSteps();
+          updateProgressbar();
+        }
+        break;
+      
+      case 2:
+        if (thirdStepValid()) { 
+          formStepsNum++;
+          console.log(formStepsNum)
+          updateFormSteps();
+          updateProgressbar();
+        }
+        break;
+      
+
+    }
   });
 });
 

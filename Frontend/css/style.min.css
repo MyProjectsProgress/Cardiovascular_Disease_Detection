@@ -1,15 +1,25 @@
-/*
- * Roxy: Bootstrap template by GettTemplates.com
- * https://gettemplates.co/roxy
- */
+:root {
+  --primary-color: #ff00cc;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 html,
 body {
   width: 100%;
+  height: -webkit-fill-available;
+  ;
   overflow-x: hidden;
-  font-family: "Montserrat";
-  font-weight: 300;
-
 }
+
+body {
+  font-family: 'Quicksand', sans-serif;
+}
+
 
 a {
   color: #ff00cc;
@@ -32,7 +42,7 @@ img {
 }
 
 .jumbotron {
-  color: #fff;
+  /* color: #fff; */
   padding-top: 80px;
   padding-bottom: 80px;
   background-repeat: no-repeat;
@@ -51,9 +61,12 @@ img {
   }
 }
 
+
 .jumbotron .container {
   position: relative;
   z-index: 1;
+  /* width: 100%;
+  height: 100%; */
 }
 
 .jumbotron:before {
@@ -363,17 +376,17 @@ img {
   display: block;
   background-color: #ff00cc;
   color: white;
-  height: 43px;
-  border: none;
-  width: 141px;
-  border-radius: 18px;
+  padding: 5px 0;
+  width: 180px;
+  border-radius: 12px;
   font-weight: bold;
   font-size: 28px;
+  text-align: center;
   cursor: pointer;
   transform: box-shadow 0.15s;
   margin-top: -71px;
   margin-bottom: 55px;
-  margin-left: -190px;
+  margin-left: 0px;
   font-family: 'Quicksand', sans-serif;
 }
 
@@ -385,8 +398,9 @@ img {
 }
 
 .container {
-  max-width: 400px;
-  width: 90%;
+  max-width: 80%;
+
+  /* width: 90%; */
   padding: 20px;
   box-shadow: none;
   border-radius: 8px;
@@ -394,7 +408,229 @@ img {
 }
 
 
+/* Global Stylings */
 label {
-  font-family: 'Quicksand', sans-serif;
-  font-size: 23px;
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #161615;
+
+}
+
+input {
+  display: block;
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 0.8rem;
+}
+
+.width-50 {
+  width: 50%;
+}
+
+.ml-auto {
+  margin-left: auto;
+}
+
+.text-center {
+  text-align: center;
+  color: #161615;
+}
+
+/* Progressbar */
+.progressbar {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  counter-reset: step;
+  margin: 2rem 0 4rem;
+
+}
+
+.progressbar::before,
+.progress {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 4px;
+  width: 100%;
+  background-color: #dcdcdc;
+  z-index: 0;
+}
+
+.progress {
+  background-color: var(--primary-color);
+  width: 0%;
+  transition: 0.3s;
+}
+
+.progress-step {
+  width: 2.1875rem;
+  height: 2.1875rem;
+  background-color: #dcdcdc;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+.progress-step::before {
+  counter-increment: step;
+  content: counter(step);
+}
+
+.progress-step::after {
+  content: attr(data-title);
+  position: absolute;
+  top: calc(100% + 0.5rem);
+  font-size: 0.85rem;
+  color: #666;
+}
+
+.progress-step-active {
+  background-color: var(--primary-color);
+  color: #f3f3f3;
+}
+
+
+
+.form-step {
+  transform-origin: top;
+  animation: animate 0.5s;
+  line-height: 0.8;
+  display: none;
+
+
+}
+
+.form-step-active {
+  display: block;
+}
+
+
+
+.input-group {
+  margin: 0.7rem 0;
+  display: block;
+  width: 100%;
+
+}
+
+@keyframes animate {
+  from {
+    transform: scale(1, 0);
+    opacity: 0;
+  }
+
+  to {
+    transform: scale(1, 1);
+    opacity: 1;
+  }
+}
+
+/* Button */
+.btns-group {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.btn {
+  padding: 0.75rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0.8rem;
+  display: block;
+  text-decoration: none;
+  background-color: var(--primary-color);
+  color: #f3f3f3;
+  text-align: center;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  box-shadow: 0 0 0 2px #fff, 0 0 0 3px var(--primary-color);
+}
+
+.form-card {
+
+  align-items: flex-start;
+  position: fixed;
+  width: 100%;
+
+
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px white;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: grey;
+  border-radius: 10px;
+}
+
+
+.select-styling {
+
+  display: block;
+  width: 100%;
+  padding: 1.5rem;
+  border: 1px solid #ccc;
+  border-radius: 0.8rem;
+
+
+}
+
+.form-card-child {
+  width: 40%;
+  float: left;
+}
+
+.form-card-child-1 {
+  color: white;
+  font-size: 6rem;
+  text-align: left;
+  margin-top: 7rem;
+  margin-left: -5rem;
+  margin-right: 5rem;
+  justify-content: center;
+  font-weight: bold;
+
+}
+
+/* Form */
+.form {
+  width: clamp(400px, 50%, 500px);
+  height: 35vw;
+  margin: 0 0 0 8rem;
+  border: 1px solid #ccc;
+  border-radius: 1rem;
+  padding: 1.5rem 3rem;
+  display: inline-block;
+
+  background-color: #fcfbfa;
+
+}
+
+.result-value {
+  padding: 2rem 0 7rem 0;
+
+}
+
+.result-value .h1 {
+  text-align: center;
+  font-weight: bold;
+
 }

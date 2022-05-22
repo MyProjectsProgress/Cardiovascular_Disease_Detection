@@ -27,10 +27,134 @@
 
 <body>
   <div class="jumbotron">
-    <div class="container text-center">
-      <a class="results-button" href="./result.html">Results</a>
+    <div class="container">
+      <a class="results-button" href="./result.html">All Results</a>
+      <div class="form-card">
+        <h1 class="form-card-child form-card-child-1">Cardiovascular Disease Detection</h1>
+        <form action="#" class="form form-card-child ">
+          <h1 class="text-center">Check Now</h1>
+          <!-- Progress bar -->
+          <div class="progressbar">
+            <div class="progress" id="progress"></div>
+            <div class="progress-step progress-step-active" data-title="Personal"></div>
+            <div class="progress-step" data-title="Habits"></div>
+            <div class="progress-step" data-title="Health Status"></div>
+            <div class="progress-step" data-title="Result"></div>
+          </div>
 
+          <!-- Steps -->
+          <div class="form-step form-step-active">
+            <div class="input-group">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" placeholder="Enter your name" />
+            </div>
+            <div class="input-group">
+              <label for="age">Age</label>
+              <input type="number" id="age" name="age" placeholder="Enter your age" />
+            </div>
+            <div class="input-group">
+              <label for="hieght">Height</label>
+              <input type="number" id="height" name="hieght" placeholder="Enter your height in cm" />
+            </div>
 
+            <div class="input-group">
+              <label for="gender">Gender</label>
+              <select name="gender" class="select-styling">
+                <option value="" disabled selected>Select gender</option>
+                <option value="2">Male</option>
+                <option value="1">Female</option>
+              </select>
+            </div>
+            <div class="">
+              <a href="#" class="btn btn-next width-50 ml-auto">Next</a>
+            </div>
+          </div>
+
+          <div class="form-step">
+
+            <div class="input-group">
+              <label for="weight">Weight</label>
+              <input type="number" id="weight" name="weight" placeholder="Enter your weight in kg" />
+            </div>
+
+            <div class="input-group">
+              <label for="Smoking">Do you smoke?</label>
+              <select class="select-styling" name="smoking">
+                <option value="" disabled selected>Choose</option>
+                <option value="1">Yes</option>
+                <option value="0">No</option>
+              </select>
+            </div>
+            <div class="input-group">
+              <label for="Alcohol intake">Do you intake alcohol?</label>
+              <select class="select-styling" name="alco">
+                <option value="" disabled selected>Choose</option>
+                <option value="1">Yes</option>
+                <option value="0">No</option>
+              </select>
+            </div>
+            <div class="input-group">
+              <label for="Physical activity">Do you exercise?</label>
+              <select class="select-styling" name="active">
+                <option value="" disabled selected>Choose</option>
+                <option value="1">Yes</option>
+                <option value="0">No</option>
+              </select>
+            </div>
+            <div class="btns-group">
+              <a href="#" class="btn btn-prev">Previous</a>
+              <a href="#" class="btn btn-next">Next</a>
+            </div>
+          </div>
+
+          <div class="form-step">
+            <div class="input-group">
+              <label for="Systolic blood pressure">Systolic blood pressure</label>
+              <input type="number" id="ap_hi" class="input-style" name="ap_hi"
+                placeholder="Enter your systolic blood pressure" />
+            </div>
+            <div class="input-group">
+              <label for="Diastolic blood pressure">Diastolic blood
+                pressure</label>
+              <input type="number" id="ap_lo" class="input-style" name="ap_lo"
+                placeholder="Enter your diastolic blood pressure" />
+            </div>
+            <div class="input-group">
+              <label for="Cholesterol">What is your Cholesterol level?</label>
+              <select class="select-styling" name="cholesterol">
+                <option value="" disabled selected>Choose</option>
+                <option value="1">Normal</option>
+                <option value="2">Above normal</option>
+                <option value="3">Well above normal</option>
+              </select>
+            </div>
+            <div class="input-group">
+              <label for="Glucose">What is your Glucose level?</label>
+              <select class="select-styling" name="gluc">
+                <option value="" disabled selected>Choose</option>
+                <option value="1">Normal</option>
+                <option value="2">Above normal</option>
+                <option value="3">Well above normal</option>
+              </select>
+            </div>
+            <div class="btns-group">
+              <a href="#" class="btn btn-prev">Previous</a>
+              <input type="submit" value="Result >" class="btn btn-next" />
+            </div>
+          </div>
+
+          <div class="form-step">
+            <div class="result-value">
+              <h1>Result</h1>
+              <h3 class="resultVal">You are in a good health :)</h3>
+            </div>
+            <div class="btns-group">
+              <a href="#" class="btn btn-prev">Previous</a>
+
+            </div>
+          </div>
+        </form>
+      </div>
       <div class="alert alert-danger err" id="errMsg" role="alert">
         Please fill all fields
       </div>

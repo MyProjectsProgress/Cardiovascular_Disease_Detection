@@ -24,7 +24,7 @@ function showData(obj) {
 						<span>${obj.age}</span>
 					  </div>
 					  <div class="issue">
-						<span>${obj.hieght}</span>
+						<span>${obj.height}</span>
 					  </div>
 					  <div class="status">
 						<span class="${result}">${result}</span>

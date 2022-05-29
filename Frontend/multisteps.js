@@ -164,7 +164,11 @@ nextBtns.forEach((btn) => {
 
 prevBtns.forEach((btn) => {
   btn.addEventListener("click", () => {
-    formStepsNum--;
+   if(formStepsNum==3){
+    window.location.replace("./index.html");
+   }else{
+      formStepsNum--;
+   }
     updateFormSteps();
     updateProgressbar();
   });
